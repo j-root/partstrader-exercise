@@ -28,6 +28,7 @@ export function getProduct(name: string){
     );
     return {
         description: products[name].description,
-        price: products[name].price
+        price: products[name].price,
+        quantity: products[name].quantity
     } as Product
 }
