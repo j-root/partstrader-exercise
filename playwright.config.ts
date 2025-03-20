@@ -15,7 +15,7 @@ export default defineConfig({
   retries: 0,
   workers: process.env.workers ? 3 : 2,
   reporter: "html",
-  timeout: 2 * 500_000,
+  timeout: 60_000,
   use: {
     baseURL: process.env.BASE_URL || 'https://automationexercise.com',
     testIdAttribute: "data-qa",
