@@ -1,0 +1,29 @@
+{
+  "name": "trading-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run:ui": "npx playwright test --ui",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "run:dev": "pnpm exec npx cross-env ENV=dev playwright test",
+    "run:test": "pnpm exec npx cross-env ENV=test playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@faker-js/faker": "^9.6.0",
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.10",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "path": "^0.12.7",
+    "pnpm": "^10.6.5",
+    "typescript-eslint": "^8.27.0"
+  }
+}
