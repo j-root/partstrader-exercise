@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { User } from "../types/types"
-import Login from "../pages/login"
+import PageBuilder from '../pages/builder';
 
 const user: User = {
   email: process.env.USER_EMAIL || "", 
@@ -10,9 +10,9 @@ const user: User = {
 
 test('[ui] testautomation login', async ({ page }) => {
   await page.goto('/login');
-  const login = new Login(page)
-  await login.signin(user)
-  await login.isUserLogin(user.name)
+  const pages = new PageBuilder(page)
+  await pages.login.signin(user)
+  await pages.login.isUserLogin(user.name)
 });
 
 test('[api] login with valid details', async ({ request }) => {
